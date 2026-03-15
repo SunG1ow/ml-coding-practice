@@ -102,4 +102,19 @@ print(d[0:3])
 # 리스트 연결
 print(a + b)
 print(b[0] + " hi~ ^^;")
-# print(a[0] + "")
+# print(a[0] + " hi~ ^^;")  # 오류 발생
+
+# 리스트 반복
+print(a * 3)
+
+# 리스트 수정
+a[2] = 99
+print(a)
+
+a[1:2] = ['a', 'b', 'c']
+print(a)
+
+a[-1] = ['d', 'e', 'f']
+print(a)
+
+# 삭제
