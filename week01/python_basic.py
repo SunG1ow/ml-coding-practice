@@ -395,4 +395,13 @@ for i in range(5, 20, 3):
 len('Python')
 
 print(sorted([3, 0, 2, 1]))
-print(sorted(''))
+print(sorted('Python'))
+
+# 패키지, 모듈 사용
+# Request('http://www.sunmoon.ac.kr')   # 오류 발생
+
+import urllib.request
+urllib.request.Request('http://www.sunmoon.ac.kr')
+
+import pandas
+pandas.DataFrame()
