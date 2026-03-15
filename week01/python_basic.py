@@ -254,3 +254,31 @@ print(s2)
 s2 = set([1, 2, 3, 4, 5, 6, 3, 1, 6])
 print(s2)
 
+# 비교 연산자
+x = 3
+y = 2
+print(x == y)
+print(x != y)
+print(x >= y)
+
+# 조건의 연결
+money = 1300
+if money >= 1200 and money < 3500:
+    print('버스를 탈 수 있습니다.')
+
+# 그룹 자료형의 원소인지 검사하기
+print(1 in [1, 2, 3])
+print(x in [1, 2, 3])
+print(x not in [1, 2, 3])
+print('a' in ['a', 'b', 'c', 'd'])
+print('i' not in 'Python')
+
+# 아무 것도 하지 않게 설정
+if money >= 10:
+    pass
+else:
+    print('저금하자!')
+
+"""# 4. 반복문"""
+
+# 
