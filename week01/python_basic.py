@@ -409,3 +409,54 @@ pandas.DataFrame()
 from datetime import datetime
 datetime.now()
 
+# 파일 객체 생성
+f = open('example.txt', 'w')
+print(f)
+
+# 파일 닫기
+f.close()
+
+# 파일 쓰기
+f = open('example.txt', 'w')
+for i in range(1, 6):
+    data = '%d번째 줄입니다. \n' % i
+    f.write(data)
+f.close()
+
+# 파일에 내용 추가하기
+f = open('example.txt', 'w')
+for i in range(6, 11):
+    data = '%d번째 줄 추가입니다. \n' % i
+    f.write(data)
+f.close()
+
+# 파일 모드 'r' - readline()
+f = open('example.txt', 'r')
+
+while True:
+    line = f.readline()
+    if not line: break
+    print(line)
+
+f.close()
+
+# 파일 모드 'r' - readlines()
+f = open('example.txt', 'r')
+lines = f.readlines()
+print(lines)
+
+for line in lines:
+    print(line)
+
+f.close()
+
+# 파일 모드 'r' - read()
+f = open('example.txt', 'r')
+data = f.read()
+f.close()
+data
+
+# with open() as 파일 객체
+with open('example.txt', 'w') as f:
+    f.write("Now is better than never.")
+# data = f.read()       # 오류 발생
