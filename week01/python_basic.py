@@ -330,3 +330,41 @@ print(abs(-3.5))
 # 그룹 자료형의 변수 x의 모든 원소가 참(0이 아닌 값)이면 True 반환
 print(all([1, 2, 3, 4]))
 print(all([4, -2, 0.0, 4]))
+
+# 그룹 자료형의 변수 x의 원소 중 하나라도 참이면 True 반환
+print(any([1, 2, 3, 4]))
+print(any([4, -2, 0.0, 4]))
+
+# 아스키코드 값에 대한 문자 출력
+print(chr(97))
+print(chr(48))
+
+# 객체 x가 가진 멤버 변수와 멤버 함수 보여주기
+print(dir([1, 2, 3]))
+print(dir({'1':'a'}))
+print(dir(1))
+
+print(int('3'))             # x를 정수 형태로 변환
+print(str(3))               # x를 문자열 형태로 반환
+
+# x를 리스트로 반환
+print(list("Python"))
+print((1, 2, 3))
+
+# x를 튜플로 반환
+print(tuple("Python"))
+print(tuple([1, 2, 3]))
+
+# x의 자료형을 반환
+print(type("abc"))
+print(type(a))
+
+# 간단한 삽입형 함수 생성
+sum = lambda a, b: a + b
+
+print(sum(3, 5))
+
+# 최대, 최소값 반환
+print(max([1, 4, 2, 8, 6]))
+print(max("Python"))
+
