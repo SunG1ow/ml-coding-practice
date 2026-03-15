@@ -369,3 +369,21 @@ print(max([1, 4, 2, 8, 6]))
 print(max("Python"))
 
 print(min([1, 4, 2, 8, 6]))
+print(min("Python"))
+
+# x의 y제곱 결과값 반환
+print(pow(2, 4))
+
+# 사용자 입력으로 받은 값을 문자열로 반환1
+c = input("값을 입력해주세요 : ")
+print(c)
+
+# 사용자 입력으로 받은 값을 문자열로 반환2
+c = input("정수를 입력하세요 : ")
+print(c)
+
+# 입력 받은 숫자에 해당되는 범위의 값을 반환
+print(range(5))
+print(list(range(5)))
+print(list(range(5, 10)))
+print(list(range(5, 10,2 )))
