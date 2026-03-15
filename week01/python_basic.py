@@ -281,4 +281,18 @@ else:
 
 """# 4. 반복문"""
 
-# 
+# for 반복문1
+test_list = ['one', 'two', 'three']
+for i in test_list:
+    x = i + '!'
+    print(x)
+
+# for 반복문2
+number = 0
+for score in [90, 25, 67, 45, 93]:
+    number += 1
+
+    if score > 60:
+        print("%d번 학생은 합격입니다." % number)
+    else:
+        print("%d번 학생은 불합격입니다." % number)
