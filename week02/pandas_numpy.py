@@ -181,5 +181,5 @@ print(sample_np)
 print(sample_np[0])
 print(sample_np[0, 2])
 print(sample_np[0:3, 2:4])
-print(sample_df[:,2])
+print(sample_np[:,2])
 
