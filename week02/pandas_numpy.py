@@ -71,3 +71,17 @@ data = {
     'is_spam': [False, False, True, False, False, True, False, False],
     'has_image': [True, False, True, True, False, False, True, True]
 }
+df =  pd.DataFrame(data)
+print(df.head())
+
+# 필터링 조건 설정
+condition = (
+    (df['comment_length'] >= 100) &     # 댓글 길이 100자 이상
+    (df['likes'] >= 20) &               # 좋아요 20개 이상
+    (~df['is_spam']) &                  # 스팸 댓글이 아니어야 함
+    (df['has_image'])                   # 이미지가 포함된 댓글이어야 함
+)
+
+# 조건을 만족하는 행들 필터링
+winner_df = df[condition]
+print(winner_df)
