@@ -207,3 +207,11 @@ print(np.arange(1, 11))
 print(np.arange(1, 11, 2))
 print(np.linspace(1, 100, 10))      # 1부터 10까지 균등한 간격의 값을 4개 추출
 
+A = np.array([4, 16, 25])
+print(np.sqrt(A))
+
+print(np.arange(8).reshape(2, 4) + 10)
+
+# 0부터 8 미만까지 출력하고 (2, 4) 크기로 재가공 후, 제곱하여 출력
+a = np.arange(8).reshape(2, 4) ** 2
+
