@@ -395,7 +395,7 @@ ax2.legend(loc='upper right', bbox_to_anchor=(1, 0.9))
 
 plt.suptitle('Survival Analysis by Number of Parents/Children (Parch) on the Titanic')
 plt.tight_layout()
-plt.savefig('Fugure16.png')
+plt.savefig('Figure16.png')
 plt.close()
 
 ## **그래프 저장하기**
