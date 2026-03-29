@@ -69,3 +69,12 @@ plt.xlabel('Count')
 plt.ylabel('Gender')
 plt.legend(bars, ['Survived - Female', 'Survived - Male'], loc='upper right')
 
+# 차이 강조를 위해 수평선 추가
+plt.axvline(x=survived_counts['male'], color='gray', linestyle='--', linewidth=1)
+
+# 생존자 수 표시
+for i, value in enumerate(survived_counts):
+    plt.test(value + 1, i, str(value), ha='left', va='center')
+
+plt.savefig('Figure03.png')
+plt.close()
