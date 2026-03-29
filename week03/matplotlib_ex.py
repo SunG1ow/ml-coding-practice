@@ -167,4 +167,22 @@ age_groups = pd.cut(titanic['Age'], bins=range(0, 81, 5))
 survived_counts = titanic.groupby([age_groups, 'Survived'], observed=False).size().unstack().fillna(0)
 print(survived_counts)
 
-# 영역
+# 영역 채우기 그래프 그리기
+plt.figure(figsize=(10, 6))
+
+# 나이대별 생존자
+plt.fill_between(survived_counts.index.astype(str), survived_counts[1],
+                 color='purple', alpha=0.9, label='Survived')
+
+# 나이대별 사망자
+plt.fill_between(survived_counts.index.astype(str), survived_counts[0],
+                 color='hotpink', alpha=0.6, label='Not Survived')
+
+plt.title('Survival by Age Group on Titanic')
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.xticks(rotation=45)
+plt.legend()
+plt.grid(True)
+plt.savefig('Figure08.png')
+plt.close()
