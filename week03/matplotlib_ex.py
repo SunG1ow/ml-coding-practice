@@ -366,3 +366,26 @@ plt.close()
 
 # 각 부모와 자녀의 수에 따른 생존자와 사망자 수 계산
 parch_counts = titanic.groupby('Parch')['Survived'].value_counts().unstack().fillna(0)
+print(parch_counts)
+
+# x, y값 설정
+x = parch_counts.index.astype(str)  # 데이터프레임의 인덱스를 문자열로 변환
+y1 = parch_counts[0].values # 사망자
+y1 = parch_counts[1].values # 생존자
+
+# plt.subplots() 함수를 사용하여 그래프 생성
+# figure와 서브플롯 생성
+fig, ax1 = plt.subplots()
+
+# 첫 번째 그래프 설정 (선 그래프)
+ax1.plot(x, y1, '-s', color='indigo', markersize=7, linewidth=5, alpha=0.7, label='Nod Survived')
+ax1.set_xlabel('Parch') # x축의 레이블
+ax1.set_ylabel('Not Survived Count', color='indigo')    # y축의 레이블
+ax1.tick_params(axis='y', labelcolor='indigo')  # 눈금의 모양과 속성
+ax1.legend(loc='upper right', bbox_to_anchor=(1, 1))    # 범례
+
+# .twinx() 함수를 사용하여 두 번째 그래프와 축을 공유하는 새로운 Axes 객체 생성
+ax2 = ax1.twinx()
+
+# 두 번째 그래프 설정 (막대 그래프)
+ax2.bar(x, y2, color='deep')
