@@ -314,3 +314,15 @@ plt.tight_layout()
 plt.savefig('Figure13.png')
 plt.close()
 
+## **개별 서브플롯을 동시에 생성하기**
+
+# 2*2 구성의 figure
+fig, axes = plt.subplots(2, 2)
+
+# 선그래프
+axes[0, 0].plot([1, 2, 3])
+axes[0, 1].plot([4, 5, 6])
+axes[1, 0].plot([7, 8, 9])
+axes[1, 1].plot([10, 11, 12])
+plt.savefig('Figure14.png')
+plt.close()
