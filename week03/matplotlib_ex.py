@@ -32,3 +32,5 @@ plt.xticks([1, 2, 3])
 plt.grid(True)
 plt.savefig('Figure01.png')
 plt.close()
+
+"""### **수직 막대 그래프 : 각 승선 항구에 따른 생존자 수 확인하기**"""
