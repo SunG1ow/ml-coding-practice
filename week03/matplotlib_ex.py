@@ -233,3 +233,42 @@ plt.legend(violin_plot['bodies'], ['1st Class', '2nd Class', '3rd Class'],
 plt.savefig('Figure10.png')
 plt.close()
 
+## **에러 바 : 요금의 평균과 표준편차 표현하기**
+
+# 각 부모와 자녀의 수에 대한 요금의 평균과 표준 편자 계산
+fare_means = titanic.groupby('Parch')['Fare'].mean()    # 평균
+print(fare_means, '\n')
+
+fare_std = titanic.groupby('Parch')['Fare'].std()   # 표준 편차
+print(fare_std)
+
+"""* 에러바는 데이터의 표준 편차를 나타내는 경우에는 길이가 길수록 해당 그룹의 데이터가 퍼져 있음을 의미"""
+
+# 에러바로 요금의 평균과 표준 편차 표현
+plt.figure(figsize=(10, 6))
+
+# 에러바 생성
+plt.errorbar(fare_means.index, fare_means, yerr=fare_std, fmt='o',
+             capsize=5, capthick=1, label='Fare')
+
+plt.title('Error Bar Plot of Fare by Parch')
+plt.xlabel('Parch')
+plt.ylabel('Fare')
+plt.xticks(fare_means.index)
+plt.legend()
+plt.savefig('Figure11.png')
+plt.close()
+
+## **개별 서브플롯을 하나씩 생성하기**
+plt.subplot(2, 2, 1)
+plt.plot([1, 2, 3])
+
+plt.subplot(2, 2, 2)
+plt.plot([4, 5, 6])
+
+plt.subplot(2, 2, 3)
+plt.plot([7, 8, 9])
+
+plt.subplot(2, 2, 4)
+plt.plot([10, 11, 12])
+
