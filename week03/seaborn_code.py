@@ -16,35 +16,22 @@ import matplotlib.pyplot as plt
 # figure에 2개의 서브 플롯을 생성
 fig = plt.figure(figsize=(15, 5))
 ax1 = fig.add_subplot(1, 2, 1)
-<<<<<<< HEAD
 ax2 = fig.add_subplot(1, 2, 2)
-=======
-ax2 = fig.add_subplot(1, 2, 1)
->>>>>>> ab72bb04a86f3db8f7f0c52c9a47b627c20cb23c
 
 # stripplot() 그리기
 sns.stripplot(x='day', y='tip', hue='sex', data=tips, alpha=0.7, ax=ax1)
 
 # swarmplot() 그리기
-<<<<<<< HEAD
 sns.swarmplot(x='day', y='tip', hue='sex', data=tips, palette='Set2', alpha=0.7, ax=ax1)
-=======
-sns.swarmplot(x='day', y='tip', hue='sex', data=tips, palette='Set2', alpha=0.7, ax=ax2)
->>>>>>> ab72bb04a86f3db8f7f0c52c9a47b627c20cb23c
 
 # 서브 플롯의 제목 설정
 ax1.set_title('Strip Plot of Tip by Day and Gender')
 ax2.set_title('Swarm Plot of Tip by Day and Gender')
 plt.savefig('../week04/Seaborn_Figure01.jpg')
 
-<<<<<<< HEAD
 # ** 빈도 그래프 **
 # figure에 2개의 서브 플롯을 생성
 fig = plt.figure(figsize=(15, 5))
-=======
-# **빈도 그래프**
-# figure에 2개의 서브 플롯을 생성
->>>>>>> ab72bb04a86f3db8f7f0c52c9a47b627c20cb23c
 ax1 = fig.add_subplot(1, 2, 1)
 ax2 = fig.add_subplot(1, 2, 2)
 
@@ -52,11 +39,7 @@ ax2 = fig.add_subplot(1, 2, 2)
 # x축 변수, 데이터셋, axe 객체 (1번째 그래프)
 sns.countplot(x='time', data=tips, ax=ax1)
 
-<<<<<<< HEAD
 # 식사가 이루어진 시간대 파악과 식사가 이루어진 요일로 색상 분류
-=======
-# 식사가 이루어진 시간대 파악과 식사가 이루어진 요일별로 색상 분류
->>>>>>> ab72bb04a86f3db8f7f0c52c9a47b627c20cb23c
 # x축 변수, hue로 색상 분류, 데이터 셋, 색상 설정, axe 객체 (2번째 그래프)
 sns.countplot(x='time', hue='day', data=tips, palette='Set2', ax=ax2)
 
@@ -68,7 +51,6 @@ plt.savefig('../week04/Seaborn_Figure02.jpg')
 # figure에 2개의 서브 플롯을 생성
 fig = plt.figure(figsize=(15, 5))
 ax1 = fig.add_subplot(1, 2, 1)
-<<<<<<< HEAD
 ax1 = fig.add_subplot(1, 2, 2)
 
 # 산점도에 선형 회귀선 표시 (fit_reg=True)
@@ -83,22 +65,6 @@ ax2.set_title('fit_reg = False')
 plt.savefig('../week04/Seaborn_Figure03.jpg')
 
 # ** 히스토그램과 커널 밀도 추정 그래프 **
-=======
-ax2 = fig.add_subplot(1, 2, 2)
-
-# 산점도에 선형 회귀선 표시(fit_reg=True)
-sns.regplot(x='total_bill', y='tip', data=tips, color='blue', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'linestyle': '--'}, ax=ax1)
-
-# 산점도에 선형 회귀선 미표시(fit_reg=False)
-sns.regplot(x='total_bill', y='tip', data=tips, color='blue', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'linestyle': '--'}, ax=ax2, fit_reg=False)
-
-fig.suptitle('Scatter Plots with Regression Lines', fontsize=16)
-ax1.set_title('fit_reg = True')
-ax2.set_title('fig_reg = False')
-plt.savefig('../week04/Seaborn_Figure03.jpg')
-
-# **히스토그램과 커널 밀도 추정 그래프**
->>>>>>> ab72bb04a86f3db8f7f0c52c9a47b627c20cb23c
 # 히스토그램과 커널 밀도 추정 그래프 함께 그리기
 sns.histplot(tips['tip'], bins=30, kde=True, color='skyblue')
 
@@ -114,9 +80,5 @@ plt.savefig('../week04/Seaborn_Figure05.jpg')
 # pairplot() 그리기
 sns.pairplot(data=tips, hue='sex', diag_kind='hist', palette='husl')
 
-<<<<<<< HEAD
 plt.suptitle('Pariplot with Histograms by Gender', y=1.05)
-=======
-plt.suptitle('Pairplot with Histograms by Gender', y=1.05)
->>>>>>> ab72bb04a86f3db8f7f0c52c9a47b627c20cb23c
 plt.savefig('../week04/Seaborn_Figure06.jpg')
