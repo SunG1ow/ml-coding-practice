@@ -35,3 +35,10 @@ housing.loc[null_rows_idx].head()
 
 from sklearn.impute import SimpleImputer
 
+# 수치형 특성만 추출
+housing_num = housing.select_dtypes(include=[np.number])
+housing_num.head()
+
+imputer.fit(housing_num)
+
+print(imputer)
