@@ -29,3 +29,5 @@ ax1.set_title('Strip Plot of Tip by Day and Gender')
 ax2.set_title('Swarm Plot of Tip by Day and Gender')
 plt.savefig('../week04/Seaborn_Figure01.jpg')
 
+# ** 빈도 그래프 **
+ax
