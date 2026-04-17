@@ -59,7 +59,7 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
 
 def getTourismStatsItem(yyyymm, nat_cd, ed_cd):
     service_url = "http://openapi.tour.go.kr/openapi/service/EdrcntTourismStatsService/getEdrcntTourismStatsList"
-    parameters = "?_type=json&serviceKey = " + SerciveKey
+    parameters = "?_type=json&serviceKey=" + SerciveKey
     parameters += "&YM=" + yyyymm
     parameters += "&NAT_CD=" + nat_cd
     parameters += "&ED_CD=" + ed_cd
@@ -78,7 +78,7 @@ def getTourismStatsItem(yyyymm, nat_cd, ed_cd):
 def getRequestUrl(url):
     req = urllib.request.Request(url)
     try:
-        response = urllib.request.rulopen(req)
+        response = urllib.request.urlopen(req)
         if response.getcode() == 200:
             print("[%s] Url Request Success" % datetime.datetime.now())
             return response.read().decode('utf-8')
