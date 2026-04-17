@@ -14,7 +14,10 @@ SerciveKey = "3c9b5c5bbb8752d28c8e400504f7fe632c1d0e9d0f0cdaf570a48b5c62aaafe9"
 def getTourismStatsItem(yyyymm, nat_cd, ed_cd):
     service_url = "http://openapi.tour.go.kr/openapi/service/EdrcntTourismStatsService/getEdrcntTourismStatsList"
     parameters = "?_type=json&serviceKey = " + SerciveKey
-    parameters += ""
+    parameters += "&YM=" + yyyymm
+    parameters += "&YM=" + yyyymm
+    parameters += "&YM=" + yyyymm
+        
 
 
 
