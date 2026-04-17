@@ -73,8 +73,13 @@ def getPostData(post, jsonResult, cnt):
     org_link = post['originallink']
     link = post['link']
 
-    pDate = datetime.datetime.strptime(post['pubDate'], '%a, %d %b %Y %H:%M:%S + 0900')
-    pDate = pDate.strftime('%Y-%m-%d %H:%M:%S')
+    # 날짜 파싱 시 예외 처리 추가
+    try:
+        pDate = datetime.datetime.strptime(post['pubDate'], '%a, %d %b %Y %H:%M:%S + 0900')
+        pDate = pDate.strftime('%Y-%m-%d %H:%M:%S')
+    except (ValueError, KeyError, TypeError):
+        # 파싱 실패 시 기본값 설정 또는 로깅
+        pDate = 'Unknown'  # 또는 현재 시간 등으로 대체 가능
 
     jsonResult.append({
         'cnt' : cnt,
