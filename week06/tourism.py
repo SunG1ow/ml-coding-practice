@@ -30,17 +30,11 @@ def main():
 def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
     jsonResult = []
     result = []
-    natName = "Unknown"  # 기본값 설정
-    ed = ed_cd  # 기본값 설정
-    dataEnd = ""  # 기본값 설정
 
     for year in range(nStartYear, nEndYear + 1):
         for month in range(1, 13):
             yyyymm = "{0}{1:0>2}".format(str(year), str(month))
             jsonData = getTourismStatsItem(yyyymm, nat_cd, ed_cd)
-            if jsonData is None:
-                print(f"[{yyyymm}] 데이터 요청 실패, 건너뜁니다.")
-                continue
             if (jsonData['response']['header']['resultMsg'] == 'OK'):
                 # 데이터가 없는 마지막 항목인 경우 ----
                 if jsonData['response']['body']['items'] == '':
@@ -59,7 +53,7 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
                 jsonResult.append({'nat_name':natName, 'nat_cd':nat_cd, 'yyyymm':yyyymm, 'visit_cnt':num})
                 result.append([natName, nat_cd, yyyymm, num])
 
-    return (jsonResult, result, natName, dataEnd)
+    return (jsonResult, result, natName, ed)
 
 """### [CODE 2]"""
 
