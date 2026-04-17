@@ -32,6 +32,7 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
     result = []
 
     ed = ed_cd # 초기값
+    natName = '' # 초기값
 
     for year in range(nStartYear, nEndYear + 1):
         for month in range(1, 13):
