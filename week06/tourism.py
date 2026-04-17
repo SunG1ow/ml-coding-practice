@@ -18,7 +18,7 @@ def main():
     nEndYear = int(input('데이터를 몇 년까지 수집할까요? : '))
     ed_cd = "E"
 
-    jsonResult, result, natName, ed = getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear)
+    jsonResult, result, natName, dataEnd = getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear)
 
     # 파일저장 : csv 파일
     columns = ["입국자국가", "국가코드", "입국연월", "입국자 수"]
