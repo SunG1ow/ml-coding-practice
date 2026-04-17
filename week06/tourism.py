@@ -31,7 +31,7 @@ def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
     jsonResult = []
     result = []
 
-    ed = '' # 초기값
+    ed = ed_cd # 초기값
 
     for year in range(nStartYear, nEndYear + 1):
         for month in range(1, 13):
