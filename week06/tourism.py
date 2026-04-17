@@ -9,6 +9,13 @@ SerciveKey = "3c9b5c5bbb8752d28c8e400504f7fe632c1d0e9d0f0cdaf570a48b5c62aaafe9"
 """### [CODE 0]"""
 
 
+"""### [CODE 3]"""
+
+
+
+
+
+
 """### [CODE 2]"""
 
 def getTourismStatsItem(yyyymm, nat_cd, ed_cd):
@@ -17,9 +24,15 @@ def getTourismStatsItem(yyyymm, nat_cd, ed_cd):
     parameters += "&YM=" + yyyymm
     parameters += "&NAT_CD=" + nat_cd
     parameters += "&ED_CD=" + ed_cd
-        
 
+    url = service_url + parameters
 
+    responseDecode = getRequestUrl(url)
+
+    if (responseDecode == None):
+        return None
+    else:
+        return json.loads(responseDecode)    
 
 """### [CODE 1]"""
 
