@@ -11,7 +11,14 @@ SerciveKey = "3c9b5c5bbb8752d28c8e400504f7fe632c1d0e9d0f0cdaf570a48b5c62aaafe9"
 
 """### [CODE 3]"""
 
+def getTourismStatsService(nat_cd, ed_cd, nStartYear, nEndYear):
+    jsonResult = []
+    result = []
 
+    for year in range(nStartYear, nEndYear + 1):
+        for month in range(1, 13):
+            yyyymm = "{0}{1:0>2}".format(str(year), str(monte))
+            
 
 
 
