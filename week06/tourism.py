@@ -8,6 +8,18 @@ SerciveKey = "3c9b5c5bbb8752d28c8e400504f7fe632c1d0e9d0f0cdaf570a48b5c62aaafe9"
 
 """### [CODE 0]"""
 
+def main():
+    jsonResult = []
+    result = []
+
+    print("<< 국내 입국한 외국인의 통계 데이터를 수집합니다. >>")
+    nat_cd = input('국가 코드를 입력하세요(중국: 112 / 일본: 130 / 미국: 275) : ')
+    nStartYear = int(input('데이터를 몇 년부터 수집할까요? : '))
+    nEndYear = int(input('데이터를 몇 년까지 수집할까요? : '))
+
+    jsonResult, result, natName, dataEnd = get
+
+
 
 """### [CODE 3]"""
 
