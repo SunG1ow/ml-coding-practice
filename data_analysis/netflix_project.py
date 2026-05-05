@@ -112,3 +112,11 @@ plt.title('We see more movie than TV show on Netflix.', fontfamily='serif', font
 plt.show()
 
 netflix.head(3)
+
+# 넷플릭스 데이터셋의 장르별 등장 횟수 계산
+genres = netflix['listed_in'].str.split(', ', expand=True).stack().value_counts()
+genres
+
+# [1단계] listed_in 열에 있는 장르를 쉼표로 분할하기
+# 예시) 인덱스 1의 listed_in 열 값 : International TV Shows, TV Dramas, TV Mysteries
+netflix['listed_in'].str.split(', ', expand=True)
