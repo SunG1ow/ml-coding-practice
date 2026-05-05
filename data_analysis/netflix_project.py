@@ -5,3 +5,16 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# 세션 저장소에 업로드한 csv 파일을 읽어 변수에 할당
+netflix = pd.read_csv('netflix_titles.csv')
+netflix.head()
+
+# .columns : 열 이름 확인
+list(netflix.columns)
+
+# .head(3) : 데이터 처음 3개의 행 출력
+netflix.head(3)
+
+# .info() : 열에 대한 요약 정보 확인
+netflix.info()
