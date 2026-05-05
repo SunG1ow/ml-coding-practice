@@ -14,3 +14,11 @@ import matplotlib.pyplot as plt
 
 def plot_digit(image_data):
     image = image_data.reshape(28, 28)
+    plt.imshow(image, cmap="binary")
+    plt.axis("off")
+
+some_dight = X[0]
+plot_digit(some_dight)
+plt.show()
+
+print(y[0])         # 샘플 데이터 레이블 확인 (=5)
