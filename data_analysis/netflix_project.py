@@ -77,3 +77,14 @@ netflix.head(2)
 # 데이터 전처리 완료한 데이터셋 csv 파일로 저장
 # index=False: 데이터프레임의 인덱스 열을 포함하지 않겠다는 뜻
 netflix.to_csv('netflix_preprocessed.csv', index=False)
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 데이터 전처리가 완료된 데이터셋 불러오기
+netflix = pd.read_csv('netflix_preprocessed.csv')
+
+# 넷플릭스 브랜드 상징 색깔 시각화
+sns.palplot(['#221f1f', '#b20710', '#e50914', '#f5f5f1'])
